@@ -4,6 +4,9 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.css";
 import ReactPlayer from 'react-player';
 import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
+import { MapContainer, Marker, Popup, TileLayer, useMap } from 'react-leaflet'
+import "leaflet/dist/leaflet.css";
+
 
 
 const data = [
@@ -59,7 +62,17 @@ export default function Content() {
             <div className="row">
                 <div className="col-6">
                     <h2>React Mapping Tool</h2>
-                    
+                    <MapContainer center={[51.505, -0.09]} zoom={13} scrollWheelZoom={false} style={{height:500}}>
+                        <TileLayer
+                            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                        />
+                        <Marker position={[51.505, -0.09]}>
+                            <Popup>
+                                A pretty CSS3 popup. <br /> Easily customizable.
+                            </Popup>
+                        </Marker>
+                    </MapContainer>
                 </div>
 
                 <div className="col-6">
