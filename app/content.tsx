@@ -58,7 +58,7 @@ export default function Content() {
 
     return <>
         <div className="container">
-            <h1>Nayana Agrawal Exercise 2</h1>
+            <h1 style={{paddingBottom:15, textAlign:"center"}}>Nayana Agrawal Exercise 2</h1>
             <div className="row">
                 <div className="col-6">
                     <h2>React Mapping Tool</h2>
@@ -100,7 +100,7 @@ export default function Content() {
                     </ResponsiveContainer>
                 </div>
 
-                <div className="col-12">
+                <div className="col-12" style={{marginTop: 30}}>
                     <h2>React Player</h2>
                     <ReactPlayer width="100%" url='https://www.youtube.com/watch?v=LXb3EKWsInQ' />
                 </div>
